@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceLink - Podsumowanie Oferty</title>
+    <title>VoiceLink - Oferta Przetargowa | SPZOZ Łysomice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,10 +34,11 @@
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #E5E7EB;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             min-height: 100vh;
             padding: 20px;
+            gap: 30px;
         }
 
         .page {
@@ -45,7 +46,7 @@
             min-height: 297mm;
             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f4f8 100%);
             box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-            padding: 35mm 25mm;
+            padding: 30mm 25mm;
             position: relative;
             overflow: hidden;
         }
@@ -76,8 +77,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 40px;
-            padding-bottom: 25px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
             border-bottom: 2px solid #E5E7EB;
         }
 
@@ -88,7 +89,7 @@
         }
 
         .logo-section img {
-            height: 70px;
+            height: 65px;
             width: auto;
         }
 
@@ -97,7 +98,7 @@
         }
 
         .header-title h1 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
             -webkit-background-clip: text;
@@ -106,9 +107,125 @@
         }
 
         .header-title p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-gray);
             font-weight: 500;
+        }
+
+        /* Tender Title */
+        .tender-title {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .tender-title h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+
+        .tender-title .tender-subtitle {
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tender-title .tender-date {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            margin-top: 4px;
+        }
+
+        /* Parties Section */
+        .parties-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .party-card {
+            background: white;
+            border-radius: 14px;
+            padding: 20px 22px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            position: relative;
+        }
+
+        .party-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 14px 14px 0 0;
+        }
+
+        .party-card.zamawiajacy::before {
+            background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+        }
+
+        .party-card.wykonawca::before {
+            background: linear-gradient(90deg, var(--gradient-mid) 0%, var(--gradient-end) 100%);
+        }
+
+        .party-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .party-card.zamawiajacy .party-label {
+            color: var(--gradient-start);
+        }
+
+        .party-card.wykonawca .party-label {
+            color: var(--gradient-mid);
+        }
+
+        .party-label-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .party-name {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .party-details {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .party-detail {
+            font-size: 0.78rem;
+            color: var(--text-gray);
+            display: flex;
+            gap: 6px;
+        }
+
+        .party-detail .label {
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 55px;
         }
 
         /* Section Titles */
@@ -116,12 +233,12 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
         .section-icon {
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
             border-radius: 12px;
             display: flex;
@@ -132,37 +249,67 @@
         }
 
         .section-icon svg {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             fill: white;
         }
 
         .section-title h2 {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Subject Section */
+        .subject-section {
+            margin-bottom: 24px;
+        }
+
+        .subject-box {
+            background: white;
+            border-radius: 14px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            border-left: 4px solid;
+            border-image: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%) 1;
+        }
+
+        .subject-box p {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .subject-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .subject-box strong {
             color: var(--text-dark);
         }
 
         /* Offer Section */
         .offer-section {
-            margin-bottom: 35px;
+            margin-bottom: 28px;
         }
 
         .offer-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
+            gap: 12px;
         }
 
         .offer-card {
             background: white;
-            padding: 18px 20px;
+            padding: 16px 18px;
             border-radius: 14px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             border: 1px solid rgba(0, 217, 255, 0.1);
             display: flex;
             align-items: flex-start;
-            gap: 14px;
+            gap: 12px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
@@ -171,30 +318,10 @@
             box-shadow: 0 8px 30px rgba(0, 217, 255, 0.12);
         }
 
-        .card-icon {
-            width: 38px;
-            height: 38px;
-            min-width: 38px;
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12) 0%, rgba(123, 44, 191, 0.12) 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-icon svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .card-icon svg path {
-            fill: url(#cardGradient);
-        }
-
         .card-number {
-            width: 36px;
-            height: 36px;
-            min-width: 36px;
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
             border-radius: 50%;
             display: flex;
@@ -202,8 +329,21 @@
             justify-content: center;
             color: white;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 0.95rem;
             box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+        }
+
+        .card-content h3 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+        }
+
+        .card-content p {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            line-height: 1.5;
         }
 
         /* Benefits Grid */
@@ -211,24 +351,24 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
-            margin-top: 18px;
+            margin-top: 14px;
         }
 
         .benefit-box {
             background: linear-gradient(135deg, rgba(0, 217, 255, 0.06) 0%, rgba(123, 44, 191, 0.06) 100%);
             border: 1px solid rgba(123, 44, 191, 0.15);
             border-radius: 10px;
-            padding: 14px 12px;
+            padding: 12px 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .benefit-icon-wrap {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
         }
 
         .benefit-icon-wrap svg {
@@ -237,7 +377,7 @@
         }
 
         .benefit-text {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: var(--text-dark);
             line-height: 1.4;
         }
@@ -249,22 +389,9 @@
             background-clip: text;
         }
 
-        .card-content h3 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 4px;
-        }
-
-        .card-content p {
-            font-size: 0.78rem;
-            color: var(--text-gray);
-            line-height: 1.5;
-        }
-
         /* Pricing Section */
         .pricing-section {
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .pricing-table {
@@ -277,7 +404,7 @@
 
         .pricing-header {
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
-            padding: 16px 25px;
+            padding: 14px 25px;
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 15px;
@@ -286,7 +413,7 @@
         .pricing-header span {
             color: white;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -299,7 +426,7 @@
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             gap: 15px;
-            padding: 16px 25px;
+            padding: 14px 25px;
             border-bottom: 1px solid #F0F0F0;
             align-items: center;
         }
@@ -311,7 +438,7 @@
         .price-single {
             text-align: center;
             font-weight: 800;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -319,7 +446,7 @@
         }
 
         .price-note-inline {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             font-weight: 500;
             background: none;
             -webkit-text-fill-color: var(--text-gray);
@@ -330,7 +457,7 @@
         }
 
         .highlight-price {
-            font-size: 1.05rem !important;
+            font-size: 1rem !important;
         }
 
         .pricing-row:last-child {
@@ -344,62 +471,131 @@
         .service-name {
             font-weight: 600;
             color: var(--text-dark);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .service-name .dot {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
             border-radius: 50%;
             flex-shrink: 0;
         }
 
-        .price {
-            text-align: center;
-            font-weight: 600;
-            color: var(--text-gray);
-            font-size: 0.85rem;
-            text-decoration: line-through;
-            opacity: 0.7;
+        /* Pilot Note */
+        .pilot-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-top: 16px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(123, 44, 191, 0.08) 100%);
+            border: 1px solid rgba(123, 44, 191, 0.15);
+            border-radius: 12px;
         }
 
-        .price-promo {
+        .note-icon {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            color: var(--gradient-mid);
+            margin-top: 2px;
+        }
+
+        .note-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .note-content strong {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .note-content p {
+            font-size: 0.78rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Validity Section */
+        .validity-section {
+            margin-bottom: 20px;
+        }
+
+        .validity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .validity-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px 18px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.1);
             text-align: center;
+        }
+
+        .validity-card .validity-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .validity-card .validity-value {
+            font-size: 0.9rem;
             font-weight: 800;
-            font-size: 0.95rem;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        /* Total Row */
-        .pricing-total {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 15px;
-            padding: 20px 25px;
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(123, 44, 191, 0.08) 100%);
-            border-top: 2px solid rgba(123, 44, 191, 0.2);
+        /* Signature Section */
+        .signature-section {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            padding-top: 20px;
         }
 
-        .pricing-total .service-name {
-            font-weight: 800;
-            font-size: 1rem;
+        .signature-box {
+            text-align: center;
+            min-width: 220px;
         }
 
-        .pricing-total .price {
-            font-size: 1rem;
-            text-decoration: line-through;
+        .signature-line {
+            border-top: 1px solid #D1D5DB;
+            margin-bottom: 8px;
+            margin-top: 50px;
+        }
+
+        .signature-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .signature-role {
+            font-size: 0.75rem;
             color: var(--text-gray);
         }
 
-        .pricing-total .price-promo {
-            font-size: 1.15rem;
+        .signature-company {
+            font-size: 0.72rem;
+            color: var(--text-gray);
+            margin-top: 2px;
         }
 
         /* Footer */
@@ -407,13 +603,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 25px;
+            padding-top: 20px;
             border-top: 2px solid #E5E7EB;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .footer-contact-left p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-gray);
             font-weight: 500;
         }
@@ -422,11 +618,11 @@
             text-align: right;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
         }
 
         .footer-contact a {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 700;
             color: var(--text-dark);
             text-decoration: none;
@@ -441,11 +637,18 @@
         }
 
         .footer-contact a.phone {
-            font-size: 1rem;
+            font-size: 0.95rem;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .footer-page {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-gray);
+            margin-top: 15px;
         }
 
         /* Decorative elements */
@@ -459,109 +662,18 @@
             pointer-events: none;
         }
 
-        /* Info Banner */
-        .info-banner {
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(123, 44, 191, 0.1) 100%);
-            border: 1px solid rgba(123, 44, 191, 0.2);
-            border-radius: 12px;
-            padding: 14px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            margin-bottom: 30px;
-        }
-
-        .info-banner strong {
-            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .info-banner-secondary {
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--text-gray);
-            margin-top: -20px;
-            margin-bottom: 25px;
-        }
-
-        .info-banner-secondary strong {
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        /* Goal Section */
-        .goal-section {
-            margin-bottom: 25px;
-            padding: 16px 20px;
-            background: white;
-            border-radius: 12px;
-            border-left: 4px solid;
-            border-image: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%) 1;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .goal-section p {
-            font-size: 0.88rem;
-            color: var(--text-dark);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .goal-section strong {
-            color: var(--text-dark);
-        }
-
-        /* Pilot Note */
-        .pilot-note {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-top: 18px;
-            padding: 18px 22px;
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(123, 44, 191, 0.08) 100%);
-            border: 1px solid rgba(123, 44, 191, 0.15);
-            border-radius: 12px;
-        }
-
-        .note-icon {
-            width: 26px;
-            height: 26px;
-            min-width: 26px;
-            color: var(--gradient-mid);
-            margin-top: 2px;
-        }
-
-        .note-icon svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .note-content strong {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            margin-bottom: 5px;
-        }
-
-        .note-content p {
-            font-size: 0.8rem;
-            color: var(--text-gray);
-            line-height: 1.6;
-            margin: 0;
-        }
-
         /* Print styles */
         @media print {
             body {
                 background: white;
                 padding: 0;
+                gap: 0;
             }
             .page {
                 box-shadow: none;
                 width: 100%;
                 min-height: auto;
+                page-break-after: always;
             }
         }
     </style>
@@ -581,6 +693,7 @@
         </defs>
     </svg>
 
+    <!-- ==================== STRONA 1 ==================== -->
     <div class="page">
         <div class="decoration-circle"></div>
 
@@ -590,22 +703,67 @@
                 <img src="logo.png" alt="VoiceLink Logo">
             </div>
             <div class="header-title">
-                <h1>Podsumowanie Oferty</h1>
-                <p>SPZOZ Łysomice</p>
+                <h1>Oferta Handlowa</h1>
+                <p>Asystent AI VoiceLink</p>
             </div>
         </div>
 
-        <!-- Info Banner -->
-        <div class="info-banner">
-            <strong>Oferta Asystenta AI VoiceLink</strong> dla placówki <strong>SPZOZ Łysomice</strong>
-        </div>
-        <div class="info-banner-secondary">
-            W dalszym etapie możliwość wdrożenia również dla placówki <strong>Grumed</strong> w Grudziądzu
+        <!-- Tender Title -->
+        <div class="tender-title">
+            <h2>Oferta</h2>
+            <div class="tender-subtitle">na wdrożenie Asystenta AI do obsługi telefonicznej pacjentów</div>
+            <div class="tender-date">Łysomice, 4 marca 2026 r.</div>
         </div>
 
-        <!-- Goal Section -->
-        <div class="goal-section">
-            <p>Celem wdrożenia jest <strong>odciążenie rejestracji telefonicznej</strong> poprzez automatyczną obsługę najczęstszych spraw pacjentów przy zachowaniu kontroli kosztów i wysokiej jakości obsługi.</p>
+        <!-- Parties -->
+        <div class="parties-section">
+            <div class="party-card zamawiajacy">
+                <div class="party-label">
+                    <svg class="party-label-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Zamawiający
+                </div>
+                <div class="party-name">Samodzielny Publiczny Zakład Opieki Zdrowotnej w Łysomicach</div>
+                <div class="party-details">
+                    <div class="party-detail"><span class="label">Adres:</span> ul. Łąkowa 3, 87-148 Łysomice</div>
+                    <div class="party-detail"><span class="label">NIP:</span> 879-22-32-031</div>
+                    <div class="party-detail"><span class="label">REGON:</span> 871257635</div>
+                </div>
+            </div>
+
+            <div class="party-card wykonawca">
+                <div class="party-label">
+                    <svg class="party-label-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Wykonawca
+                </div>
+                <div class="party-name">B4WOOD Spółka z ograniczoną odpowiedzialnością</div>
+                <div class="party-details">
+                    <div class="party-detail"><span class="label">Adres:</span> Bukowa 21, 87-148 Łysomice</div>
+                    <div class="party-detail"><span class="label">NIP:</span> 8792746178</div>
+                    <div class="party-detail"><span class="label">REGON:</span> 524687586</div>
+                    <div class="party-detail"><span class="label">KRS:</span> 0001024080</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subject -->
+        <div class="subject-section">
+            <div class="section-title">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+                <h2>Przedmiot oferty</h2>
+            </div>
+
+            <div class="subject-box">
+                <p>Niniejsza oferta dotyczy <strong>wdrożenia i utrzymania Asystenta AI VoiceLink</strong> — inteligentnego systemu obsługi telefonicznej pacjentów dla Samodzielnego Publicznego Zakładu Opieki Zdrowotnej w Łysomicach.</p>
+                <p>Celem wdrożenia jest <strong>odciążenie rejestracji telefonicznej</strong> poprzez automatyczną obsługę najczęstszych spraw pacjentów, przy jednoczesnym zachowaniu kontroli kosztów i wysokiej jakości obsługi.</p>
+            </div>
         </div>
 
         <!-- Offer Section -->
@@ -616,7 +774,7 @@
                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                     </svg>
                 </div>
-                <h2>Zakres działania agenta AI</h2>
+                <h2>Zakres działania Asystenta AI</h2>
             </div>
 
             <div class="offer-grid">
@@ -704,7 +862,7 @@
             <div class="pricing-table">
                 <div class="pricing-header">
                     <span>Usługa</span>
-                    <span>Cena</span>
+                    <span>Cena netto</span>
                 </div>
 
                 <div class="pricing-row two-col">
@@ -712,15 +870,7 @@
                         <span class="dot"></span>
                         Wdrożenie systemu (jednorazowo)
                     </div>
-                    <div class="price-single">9 000 zł <span class="price-note-inline">/ placówka</span></div>
-                </div>
-
-                <div class="pricing-row two-col highlight-row">
-                    <div class="service-name">
-                        <span class="dot"></span>
-                        <strong>Razem za 2 placówki</strong>
-                    </div>
-                    <div class="price-single highlight-price">18 000 zł</div>
+                    <div class="price-single">9 000 zł</div>
                 </div>
 
                 <div class="pricing-row two-col">
@@ -778,16 +928,34 @@
             </div>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="footer-contact-left">
-                <p>Masz pytania? Skontaktuj się z nami:</p>
-            </div>
-            <div class="footer-contact">
-                <a href="mailto:karol.kulis@voicelink.pl">karol.kulis@voicelink.pl</a>
-                <a href="tel:+48603076043" class="phone">+48 603 076 043</a>
+        <!-- Validity -->
+        <div class="validity-section">
+            <div class="validity-grid">
+                <div class="validity-card">
+                    <div class="validity-label">Ważność oferty</div>
+                    <div class="validity-value">30 dni</div>
+                </div>
+                <div class="validity-card">
+                    <div class="validity-label">Termin realizacji</div>
+                    <div class="validity-value">do 14 dni roboczych</div>
+                </div>
+                <div class="validity-card">
+                    <div class="validity-label">Forma płatności</div>
+                    <div class="validity-value">przelew 14 dni</div>
+                </div>
             </div>
         </div>
+
+        <!-- Signature -->
+        <div class="signature-section">
+            <div class="signature-box">
+                <div class="signature-line"></div>
+                <div class="signature-name">Jacek Kulis</div>
+                <div class="signature-role">Prezes Zarządu</div>
+                <div class="signature-company">B4WOOD Sp. z o.o.</div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
